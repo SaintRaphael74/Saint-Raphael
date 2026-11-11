@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Saint Raphaël — Voitures & logement à la frontière (Gaillard)</title>
+<title>Saint Raphaël — Voitures &amp; logement à la frontière (Gaillard)</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
 :root{color-scheme:light}
@@ -13,6 +13,9 @@ body{font-family:Arial,Helvetica,sans-serif;color:#1b2a30}
 .brandbar{display:flex;align-items:center;gap:14px;padding:18px 2px 14px}
 .brandbar .name{font-size:26px;font-weight:700;color:#1F4E5F;line-height:1}
 .brandbar .tag{font-size:12px;letter-spacing:2.5px;color:#55555f;margin-top:4px}
+.lng{margin-left:auto;display:flex;gap:5px}
+.lng button{border:1px solid #cdd8dc;background:#fff;color:#1F4E5F;font-weight:700;font-size:12px;padding:5px 10px;border-radius:7px;cursor:pointer}
+.lng button.on{background:#1F4E5F;color:#fff;border-color:#1F4E5F}
 .hero{background:#1F4E5F;color:#fff;border-radius:14px;padding:22px 20px;margin:4px 0 20px;border-top:4px solid #C8922A}
 .hero h1{margin:0 0 6px;font-size:22px}
 .hero p{margin:0;color:#DCE6EB;font-size:14.5px;line-height:1.45}
@@ -25,7 +28,6 @@ h2.sec{font-size:18px;color:#1F4E5F;margin:24px 0 10px;border-bottom:2px solid #
 .car h3{margin:0 0 3px;font-size:17px;color:#1F4E5F}
 .car .meta{margin:0;font-size:13px;color:#667}
 .right{text-align:right;flex-shrink:0}
-.price{font-weight:700;color:#2E7D46;font-size:15px;margin:0 0 6px;white-space:nowrap}
 .btn{display:inline-block;background:#1F4E5F;color:#fff;text-decoration:none;padding:9px 18px;border-radius:9px;font-size:14px;font-weight:700}
 .btn:hover{background:#163a46}
 .steps{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0}
@@ -35,6 +37,8 @@ h2.sec{font-size:18px;color:#1F4E5F;margin:24px 0 10px;border-bottom:2px solid #
 .box b{color:#1F4E5F}
 ul.cond{margin:6px 0 0;padding-left:20px;font-size:13.5px;color:#44555c;line-height:1.6}
 .note{font-size:12.5px;color:#667;line-height:1.5;margin:18px 0 0;border-top:1px solid #e3e9ec;padding-top:14px}
+body:not(.en) .en{display:none}
+body.en .fr{display:none}
 @media(max-width:460px){.card{flex-direction:column;align-items:flex-start}.right{text-align:left}}
 </style>
 </head>
@@ -50,77 +54,109 @@ ul.cond{margin:6px 0 0;padding-left:20px;font-size:13.5px;color:#44555c;line-hei
       </g>
       <path d="M0,-34 L7,-7 L34,0 L7,7 L0,30 L-7,7 L-34,0 L-7,-7 Z" fill="#C8922A"/>
     </svg>
-    <div><div class="name">Saint Raphaël</div><div class="tag">LA MOBILITÉ GUIDÉE</div></div>
+    <div><div class="name">Saint Raphaël</div><div class="tag"><span class="fr">LA MOBILITÉ GUIDÉE</span><span class="en">GUIDED MOBILITY</span></div></div>
+    <div class="lng"><button id="bfr" type="button">FR</button><button id="ben" type="button">EN</button></div>
   </div>
 
   <div class="hero">
-    <h1>Voitures &amp; logement à la frontière — Gaillard</h1>
-    <p>À 1 min à pied de la voie verte et à 5 min du tram T17 (station Millet), reliant Annemasse et Genève.
-    Voitures récentes et assurées, réservation en ligne, accès sans clé 24/7. À la journée, à la semaine ou au mois.</p>
+    <h1><span class="fr">Voitures &amp; logement à la frontière — Gaillard</span><span class="en">Cars &amp; housing at the border — Gaillard</span></h1>
+    <p><span class="fr">À 1 min à pied de la voie verte et à 5 min du tram T17 (station Millet), reliant Annemasse et Genève.
+    Voitures récentes et assurées, réservation en ligne, accès sans clé 24/7. À la journée, à la semaine ou au mois.</span><span class="en">A 1-minute walk from the greenway and 5 minutes from the T17 tram (Millet stop), linking Annemasse and Geneva.
+    Recent, fully insured cars, online booking, keyless access 24/7. By the day, the week or the month.</span></p>
   </div>
 
-  <h2 class="sec">Nos véhicules à disposition</h2>
-  <p class="intro">Réservez en ligne. <b>-15 % à la semaine</b> et <b>-30 % au mois</b> par rapport au tarif journalier.</p>
+  <h2 class="sec"><span class="fr">Nos véhicules à disposition</span><span class="en">Our available vehicles</span></h2>
+  <p class="intro"><span class="fr">Réservez en ligne. <b>-15 % à la semaine</b> et <b>-30 % au mois</b> par rapport au tarif journalier.</span><span class="en">Book online. <b>-15% per week</b> and <b>-30% per month</b> compared with the daily rate.</span></p>
 
   <div class="card">
-    <div class="car"><h3>Dacia Sandero</h3><p class="meta">Essence · 5 places · boîte manuelle · 2021</p></div>
+    <div class="car"><h3>Dacia Sandero</h3><p class="meta"><span class="fr">Essence · 5 places · boîte manuelle · 2021</span><span class="en">Petrol · 5 seats · manual · 2021</span></p></div>
     <div class="right">
-    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/dacia-sandero-1905181" target="_blank" rel="noopener">Réserver</a></div>
+    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/dacia-sandero-1905181" target="_blank" rel="noopener"><span class="fr">Réserver</span><span class="en">Book</span></a></div>
   </div>
   <div class="card">
-    <div class="car"><h3>Renault Express</h3><p class="meta">Utilitaire 3 m³ · diesel · 2022</p></div>
+    <div class="car"><h3>Renault Express</h3><p class="meta"><span class="fr">Utilitaire 3 m³ · diesel · 2022</span><span class="en">Van 3 m³ · diesel · 2022</span></p></div>
     <div class="right">
-    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/renault-express-1952822" target="_blank" rel="noopener">Réserver</a></div>
+    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/renault-express-1952822" target="_blank" rel="noopener"><span class="fr">Réserver</span><span class="en">Book</span></a></div>
   </div>
   <div class="card">
-    <div class="car"><h3>Peugeot 208</h3><p class="meta">Essence · 5 places · boîte automatique · 2020</p></div>
+    <div class="car"><h3>Peugeot 208</h3><p class="meta"><span class="fr">Essence · 5 places · boîte automatique · 2020</span><span class="en">Petrol · 5 seats · automatic · 2020</span></p></div>
     <div class="right">
-    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/peugeot-208-1916689" target="_blank" rel="noopener">Réserver</a></div>
+    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/peugeot-208-1916689" target="_blank" rel="noopener"><span class="fr">Réserver</span><span class="en">Book</span></a></div>
   </div>
   <div class="card">
-    <div class="car"><h3>Renault Clio</h3><p class="meta">Essence · 5 places · boîte manuelle · 2023</p></div>
+    <div class="car"><h3>Renault Clio</h3><p class="meta"><span class="fr">Essence · 5 places · boîte manuelle · 2023</span><span class="en">Petrol · 5 seats · manual · 2023</span></p></div>
     <div class="right">
-    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/renault-clio-1946128" target="_blank" rel="noopener">Réserver</a></div>
+    <a class="btn" href="https://fr.getaround.com/location-voiture/gaillard/renault-clio-1946128" target="_blank" rel="noopener"><span class="fr">Réserver</span><span class="en">Book</span></a></div>
   </div>
 
-  <p class="intro" style="margin-top:6px;text-align:center">Besoin d'un tarif adapté à votre mission ? <b>Écrivez-nous à contact@saint-raphael-mobilite.fr : chaque demande de réduction est étudiée au cas par cas.</b></p>
+  <p class="intro" style="margin-top:6px;text-align:center"><span class="fr">Besoin d'un tarif adapté à votre mission ? <b>Écrivez-nous à contact@saint-raphael-mobilite.fr : chaque demande de réduction est étudiée au cas par cas.</b></span><span class="en">Need a rate tailored to your assignment? <b>Email us at contact@saint-raphael-mobilite.fr: every discount request is reviewed case by case.</b></span></p>
 
-  <h2 class="sec">Comment ça marche</h2>
+  <h2 class="sec"><span class="fr">Comment ça marche</span><span class="en">How it works</span></h2>
   <div class="steps">
-    <div class="step"><b>1. Réservez en ligne</b>À la journée, à la semaine ou au mois.</div>
-    <div class="step"><b>2. Accès sans clé 24/7</b>Vous ouvrez la voiture avec l'application, à Gaillard.</div>
-    <div class="step"><b>3. Roulez assuré</b>Assurance et assistance incluses, aucun passage en agence.</div>
-    <div class="step"><b>4. Rien à gérer</b>Nettoyage et entretien mécanique inclus : la voiture est toujours propre et prête à rouler.</div>
+    <div class="step"><span class="fr"><b>1. Réservez en ligne</b>À la journée, à la semaine ou au mois.</span><span class="en"><b>1. Book online</b>By the day, the week or the month.</span></div>
+    <div class="step"><span class="fr"><b>2. Accès sans clé 24/7</b>Vous ouvrez la voiture avec l'application, à Gaillard.</span><span class="en"><b>2. Keyless access 24/7</b>Open the car with the app, in Gaillard.</span></div>
+    <div class="step"><span class="fr"><b>3. Roulez assuré</b>Assurance et assistance incluses, aucun passage en agence.</span><span class="en"><b>3. Drive insured</b>Insurance and assistance included, no agency visit.</span></div>
+    <div class="step"><span class="fr"><b>4. Rien à gérer</b>Nettoyage et entretien mécanique inclus : la voiture est toujours propre et prête à rouler.</span><span class="en"><b>4. Nothing to manage</b>Cleaning and mechanical servicing included: the car is always clean and ready to go.</span></div>
   </div>
 
-  <h2 class="sec">Un logement près de votre mission</h2>
-  <div class="box">
+  <h2 class="sec"><span class="fr">Un logement près de votre mission</span><span class="en">Housing near your assignment</span></h2>
+  <div class="box"><span class="fr">
     Appartements meublés dans le bassin annemassien, proches de la frontière et du tram T17.
-    Intéressé ? <b>Écrivez-nous à contact@saint-raphael-mobilite.fr, nous vous orientons vers un logement disponible.</b>
+    Intéressé ? <b>Écrivez-nous à contact@saint-raphael-mobilite.fr, nous vous orientons vers un logement disponible.</b></span><span class="en">
+    Furnished flats in the Annemasse area, close to the border and the T17 tram.
+    Interested? <b>Email us at contact@saint-raphael-mobilite.fr and we'll point you to available housing.</b></span>
   </div>
 
-  <h2 class="sec">Louer une flotte (longue durée)</h2>
-  <div class="box">
+  <h2 class="sec"><span class="fr">Louer une flotte (longue durée)</span><span class="en">Rent a fleet (long term)</span></h2>
+  <div class="box"><span class="fr">
     Entreprise, agence d'intérim ou collectivité ? Nous proposons la <b>location longue durée de plusieurs véhicules</b>,
     avec une offre <b>adaptable à votre besoin</b> : formule <b>clé en main</b> (assurance, entretien, nettoyage, assistance, tout compris)
-    ou formule <b>allégée</b> à prix plus économique. Écrivez-nous à <b>contact@saint-raphael-mobilite.fr</b>, nous construisons l'offre avec vous.
+    ou formule <b>allégée</b> à prix plus économique. Écrivez-nous à <b>contact@saint-raphael-mobilite.fr</b>, nous construisons l'offre avec vous.</span><span class="en">
+    A company, temp agency or public body? We offer <b>long-term rental of several vehicles</b>,
+    with an offer <b>tailored to your needs</b>: an <b>all-inclusive</b> package (insurance, servicing, cleaning, assistance)
+    or a <b>lighter</b>, more economical package. Email us at <b>contact@saint-raphael-mobilite.fr</b> and we'll build the offer with you.</span>
   </div>
 
-  <h2 class="sec">Bon à savoir</h2>
+  <h2 class="sec"><span class="fr">Bon à savoir</span><span class="en">Good to know</span></h2>
   <ul class="cond">
-    <li>Assurance tous risques et assistance incluses.</li>
-    <li>Permis depuis 2 ans minimum ; durée minimale de location selon le véhicule.</li>
-    <li>Parc sécurisé : vidéosurveillance et contrôle d'accès.</li>
+    <li><span class="fr">Assurance tous risques et assistance incluses.</span><span class="en">Comprehensive insurance and assistance included.</span></li>
+    <li><span class="fr">Permis depuis 2 ans minimum ; durée minimale de location selon le véhicule.</span><span class="en">Licence held for at least 2 years; minimum rental period depending on the vehicle.</span></li>
+    <li><span class="fr">Parc sécurisé : vidéosurveillance et contrôle d'accès.</span><span class="en">Secure lot: video surveillance and access control.</span></li>
   </ul>
 
   <h2 class="sec">Contact</h2>
-  <div class="box">
-    Une question sur un véhicule, une flotte ou un logement ? Écrivez-nous à <b>contact@saint-raphael-mobilite.fr</b>
+  <div class="box"><span class="fr">
+    Une question sur un véhicule, une flotte ou un logement ? Écrivez-nous à <b>contact@saint-raphael-mobilite.fr</b></span><span class="en">
+    A question about a vehicle, a fleet or housing? Email us at <b>contact@saint-raphael-mobilite.fr</b></span>
   </div>
 
-  <div class="dlwrap" style="margin-top:22px"><a class="btn-dl" href="fiche-a4-saint-raphael.pdf" download>Télécharger une page de présentation A4 pour affichage</a></div>
+  <div class="dlwrap" style="margin-top:22px">
+    <a class="btn-dl fr" href="fiche-a4-saint-raphael.pdf" download>Télécharger une page de présentation A4 pour affichage</a>
+    <a class="btn-dl en" href="fiche-a4-saint-raphael-en.pdf" download>Download an A4 flyer to print and display</a>
+  </div>
 
-  <p class="note">Le prix exact et les disponibilités s'affichent au moment de la réservation en ligne.</p>
+  <p class="note"><span class="fr">Le prix exact et les disponibilités s'affichent au moment de la réservation en ligne.</span><span class="en">The exact price and availability are shown when you book online.</span></p>
 </div>
+
+<script>
+(function(){
+  var bfr=document.getElementById('bfr'), ben=document.getElementById('ben');
+  function set(l){
+    var en = (l==='en');
+    document.body.classList.toggle('en', en);
+    document.documentElement.lang = en ? 'en' : 'fr';
+    document.title = en ? 'Saint Raphaël — Cars & housing at the border (Gaillard)'
+                        : 'Saint Raphaël — Voitures & logement à la frontière (Gaillard)';
+    bfr.classList.toggle('on', !en); ben.classList.toggle('on', en);
+    try{ localStorage.setItem('srlang', l); }catch(e){}
+  }
+  var saved=null;
+  try{ saved=localStorage.getItem('srlang'); }catch(e){}
+  if(!saved){ saved=((navigator.language||navigator.userLanguage||'fr').slice(0,2)==='en')?'en':'fr'; }
+  bfr.onclick=function(){set('fr');};
+  ben.onclick=function(){set('en');};
+  set(saved);
+})();
+</script>
 </body>
 </html>
