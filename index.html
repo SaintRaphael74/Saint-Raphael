@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saint Raphaël — Voitures &amp; logement à la frontière (Gaillard)</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="description" content="Location de voitures et logement à la frontière à Gaillard, à 5 min du tram T17 pour Genève. Voitures récentes et assurées, accès sans clé 24/7. À la journée, à la semaine ou au mois.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Saint Raphaël">
+<meta property="og:title" content="Saint Raphaël — Voitures & logement à la frontière (Gaillard)">
+<meta property="og:description" content="À 5 min du tram T17 pour Genève : voitures récentes et assurées, sans clé 24/7, et logement à la frontière. À la journée, à la semaine ou au mois.">
+<meta property="og:url" content="https://saint-raphael-mobilite.fr/">
+<meta property="og:image" content="https://saint-raphael-mobilite.fr/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saint Raphaël — Voitures & logement à la frontière (Gaillard)">
+<meta name="twitter:description" content="À 5 min du tram T17 pour Genève : voitures récentes et assurées, sans clé 24/7, et logement à la frontière.">
+<meta name="twitter:image" content="https://saint-raphael-mobilite.fr/og.png">
 <style>
 :root{color-scheme:light}
 html,body{margin:0;background:#f4f7f8}
@@ -159,8 +174,9 @@ body.en .fr{display:none}
     bfr.classList.toggle('on', !en); ben.classList.toggle('on', en);
     try{ localStorage.setItem('srlang', l); }catch(e){}
   }
-  var saved=null;
-  try{ saved=localStorage.getItem('srlang'); }catch(e){}
+  var q=location.search+location.hash;
+  var saved = /[?&#]lang=en/.test(q) ? 'en' : (/[?&#]lang=fr/.test(q) ? 'fr' : null);
+  if(!saved){ try{ saved=localStorage.getItem('srlang'); }catch(e){} }
   if(!saved){ saved=((navigator.language||navigator.userLanguage||'fr').slice(0,2)==='en')?'en':'fr'; }
   bfr.onclick=function(){set('fr');};
   ben.onclick=function(){set('en');};
