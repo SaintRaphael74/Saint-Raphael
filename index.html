@@ -167,5 +167,20 @@ body.en .fr{display:none}
   set(saved);
 })();
 </script>
+
+<!-- Statistiques GoatCounter (compte : saintraphael) -->
+<script data-goatcounter="https://saintraphael.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a.btn, a.btn-dl, a.btn-main');
+  if(!a || !(window.goatcounter && window.goatcounter.count)) return;
+  var href=a.getAttribute('href')||'', ev;
+  if(a.classList.contains('btn-dl')) ev='download-fiche';
+  else if(a.classList.contains('btn-main')) ev='cta-vehicules';
+  else { var m=href.match(/gaillard\/([a-z0-9-]+?)-\d+/i); ev='reserve-'+(m?m[1]:'vehicule'); }
+  window.goatcounter.count({path:'/event/'+ev, title:'clic '+ev, event:true});
+});
+</script>
 </body>
 </html>
